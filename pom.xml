@@ -11,7 +11,7 @@
 
 	<groupId>com.baidu</groupId>
 	<artifactId>jprotobuf-rpc-common</artifactId>
-	<version>1.2</version>
+	<version>1.1</version>
 
 	<name>jprotobuf-rpc-common</name>
 	<description>Common base library for RPC implementation usage.</description>
