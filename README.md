@@ -9,7 +9,7 @@ Common base library for RPC implementation usage.
 <dependency>
   <groupId>com.baidu</groupId>
   <artifactId>jprotobuf-rpc-common</artifactId>
-  <version>1.1</version>
+  <version>1.2</version>
 </dependency>
 ```
 
