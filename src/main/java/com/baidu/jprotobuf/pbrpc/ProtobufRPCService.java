@@ -23,7 +23,7 @@ import java.lang.annotation.Target;
 @Target({ ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface ProtobufPRCService {
+public @interface ProtobufRPCService {
     
     /**
      * <pre>

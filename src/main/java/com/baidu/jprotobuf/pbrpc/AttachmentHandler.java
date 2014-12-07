@@ -12,7 +12,7 @@ package com.baidu.jprotobuf.pbrpc;
  *
  * @author xiemalin
  * @since 1.0
- * @see ProtobufPRCService
+ * @see ProtobufRPCService
  */
 public interface AttachmentHandler {
 
