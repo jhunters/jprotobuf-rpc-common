@@ -19,11 +19,11 @@ public interface ServerAttachmentHandler {
     /**
      * handle attachment from client and return new attachment response back to client 
      * 
-     * @param response byte array receive from client
+     * @param request attachment byte array received from client
      * @param serviceName
      * @param methodName
      * @param params
      * @return attachment response back to client
      */
-    byte[] handleAttachement(byte[] response, String serviceName, String methodName, Object... params);
+    byte[] handleAttachement(byte[] request, String serviceName, String methodName, Object... params);
 }
