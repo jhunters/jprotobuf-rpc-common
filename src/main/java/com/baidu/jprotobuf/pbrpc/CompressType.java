@@ -20,7 +20,11 @@ public enum CompressType {
      * No compress
      */
     NO(0),
-    // Snappy(1),
+    
+    /**
+     * Snappy compress 
+     */
+    Snappy(1),
     
     /**
      * GZIP compress
