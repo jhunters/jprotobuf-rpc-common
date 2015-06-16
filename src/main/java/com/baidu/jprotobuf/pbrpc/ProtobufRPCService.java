@@ -43,6 +43,10 @@ public @interface ProtobufRPCService {
      */
     String methodName() default "";
 
+    /**
+     * RPC service description message. It used to generate documention.
+     */
+    String description() default "";
     
     /**
      * attachment handler
