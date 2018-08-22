@@ -13,7 +13,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-
 /**
  * PbRPC definition annotation.
  * 
@@ -24,7 +23,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface ProtobufRPC {
-    
+
     /**
      * <pre>
      * The service name for protobuf RPC definition.
@@ -45,24 +44,32 @@ public @interface ProtobufRPC {
 
     /**
      * Log ID generator.
+     * 
      * @return class instance of LogIDGenerator
      */
     Class<? extends LogIDGenerator> logIDGenerator() default DummyLogIDGenerator.class;
-    
+
     /**
      * @return once talk timeout in milliseconds.
      */
-    long onceTalkTimeout() default 0; 
-    
+    long onceTalkTimeout() default 0;
+
     /**
      * attachment handler
+     * 
      * @return class instance of ClientAttachmentHandler
      */
     Class<? extends ClientAttachmentHandler> attachmentHandler() default DummyClientAttachmentHandler.class;
 
     /**
-     * Compress type. 
+     * Compress type.
+     * 
      * @see CompressType
      */
     CompressType compressType() default CompressType.NO;
+
+    /**
+     * authentication data handler
+     */
+    Class<? extends AuthenticationDataHandler> authenticationDataHandler() default DummyAuthenticationDataHandler.class;
 }

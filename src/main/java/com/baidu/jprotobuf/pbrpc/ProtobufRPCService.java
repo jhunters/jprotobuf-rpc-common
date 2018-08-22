@@ -13,7 +13,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-
 /**
  * PbRPC definition annotation.
  * 
@@ -24,7 +23,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface ProtobufRPCService {
-    
+
     /**
      * <pre>
      * The service name for protobuf RPC definition.
@@ -47,11 +46,17 @@ public @interface ProtobufRPCService {
      * RPC service description message. It used to generate documention.
      */
     String description() default "";
-    
+
     /**
      * attachment handler
+     * 
      * @return class instance of DummyAttachmentHandler
      */
     Class<? extends ServerAttachmentHandler> attachmentHandler() default DummyServerAttachmentHandler.class;
 
+    /**
+     * client authentication data handler
+     */
+    Class<? extends ServerAuthenticationDataHandler> authenticationDataHandler() 
+        default DummyServerAuthenticationDataHandler.class;
 }
