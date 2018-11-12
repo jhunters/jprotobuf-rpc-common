@@ -8,7 +8,7 @@
 package com.baidu.jprotobuf.pbrpc;
 
 /**
- * The generator interface class for each log ID generate.
+ * The generator interface class for client to create authentication data for each RPC method invoking.
  *
  * @author xiemalin
  * @since 1.7
@@ -17,11 +17,11 @@ package com.baidu.jprotobuf.pbrpc;
 public interface AuthenticationDataHandler {
 
     /**
-     * To generate log id for each RPC method invoke
+     * To create authenticate data for each RPC method invoking
      * 
      * @param serviceName the service name
      * @param methodName the method name
-     * @param params method params
+     * @param params method parameters
      * @return authentication data with byte array
      */
     byte[] create(String serviceName, String methodName, Object... params);

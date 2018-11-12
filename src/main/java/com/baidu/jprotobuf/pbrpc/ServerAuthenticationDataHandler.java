@@ -8,7 +8,7 @@
 package com.baidu.jprotobuf.pbrpc;
 
 /**
- * The generator interface class for each log ID generate.
+ * The handler interface class for RPC server to check each authentication data for each RPC method invoking.
  *
  * @author xiemalin
  * @since 1.7
@@ -17,12 +17,12 @@ package com.baidu.jprotobuf.pbrpc;
 public interface ServerAuthenticationDataHandler {
 
     /**
-     * To generate log id for each RPC method invoke
+     * To check authentication data for each RPC method invoking
      * 
      * @param authenticationData authentication data
      * @param serviceName the service name
      * @param methodName the method name
-     * @param params method params
+     * @param params method parameters
      */
     void handle(byte[] authenticationData, String serviceName, String methodName, Object... params);
 }
