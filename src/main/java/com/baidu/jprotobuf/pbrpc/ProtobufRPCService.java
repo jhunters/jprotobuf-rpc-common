@@ -1,9 +1,5 @@
 /**
- * Copyright 2014 the original author or authors.
- *
- * Licensed under the Baidu company (the "License");
- * you may not use this file except in compliance with the License.
- *
+ * Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
  */
 package com.baidu.jprotobuf.pbrpc;
 
@@ -46,6 +42,13 @@ public @interface ProtobufRPCService {
      * RPC service description message. It used to generate documention.
      */
     String description() default "";
+    
+    /**
+     * Run in async mode by memory queue. Once this tag active will return ASAP and blank response returned.
+     *
+     * @return true, if successful
+     */
+    boolean async() default false;
 
     /**
      * attachment handler
